@@ -43,13 +43,13 @@ add_library(Franka::Franka SHARED IMPORTED)
 
 set_target_properties(Franka::Franka PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_attribute_deprecated;cxx_constexpr;cxx_defaulted_functions;cxx_deleted_functions;cxx_generalized_initializers;cxx_noexcept;cxx_uniform_initialization"
-  INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/include"
+  INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/libfranka/include"
 )
 
 # Import target "Franka::Franka" for configuration "Release"
 set_property(TARGET Franka::Franka APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Franka::Franka PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${CMAKE_SOURCE_DIR}/libfranka/libfranka.so.0.7.0"
+  IMPORTED_LOCATION_RELEASE "${CMAKE_SOURCE_DIR}/libfranka/build/libfranka.so.0.7.0"
   IMPORTED_SONAME_RELEASE "libfranka.so.0.7"
   )
 

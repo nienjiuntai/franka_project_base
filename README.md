@@ -10,5 +10,5 @@ cmake .. && make
 ```
 
 # TODO
-- [ ] Put shell script to clone libfranka && build target version
+- [x] Put shell script to clone libfranka && build target version
 - [ ] Adjust CMakeLists to more easy format to maintain project
