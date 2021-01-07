@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.5)
 
 project(pads_prject_name
     VERSION 0.0.1
@@ -34,13 +34,20 @@ find_package(Threads REQUIRED)
 ## Dependencies
 find_package(Eigen3 REQUIRED)
 
+find_package(SWIG 3.0 COMPONENTS python)
+if(SWIG_FOUND)
+  message("SWIG found: ${SWIG_EXECUTABLE}")
+endif()
+INCLUDE_DIRECTORIES("include")
 # ## Tools
 file(GLOB_RECURSE SOURCES
   src/*.cpp
 )
 file(GLOB_RECURSE HEADERS
   include/*.h
+  include/*.hpp
   src/*.h
+  src/*.hpp
 )
 
 option(BUILD_EXAMPLES "Build example code" ON)
