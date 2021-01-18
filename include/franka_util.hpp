@@ -4,7 +4,11 @@
 #include <franka/robot_state.h>
 #include <franka/gripper.h>
 
+<<<<<<< HEAD
 #include "examples_common.h"
+=======
+#include "MotionGenerator.h"
+>>>>>>> 0856c79fb0f5760b4af7d18324fe71a902877464
 
 namespace FrankaControl {
 class FrankaControl {

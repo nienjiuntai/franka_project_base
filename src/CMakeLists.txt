@@ -40,3 +40,4 @@ target_link_libraries(examples_common PUBLIC Franka::Franka Eigen3::Eigen3)
 # SWIG_ADD_MODULE(franka_util python franka_util.i franka_util.cpp)
 swig_add_library(franka_util TYPE SHARED LANGUAGE python SOURCES franka_util.i franka_util.cpp)
 SWIG_LINK_LIBRARIES(franka_util ${PYTHON_LIBRARIES} examples_common)
+
